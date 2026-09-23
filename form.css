@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f6;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar,
+.bottom-bar {
+    height: 6px;
+    background-color: #1e3a8a;
+    flex-shrink: 0;
+}
+
+.page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    text-align: center;
+    margin: 0 0 25px 0;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d7dbe0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .col {
+    flex: 1;
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}

@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px 32px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: #ffffff;
+}
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.garis {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 12px 0 20px;
+}
+
+.form-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: flex-end;
+    padding: 14px 16px;
+    background: #f0f0f0;
+    border: 1px solid #d0d0d0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item label {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #444;
+}
+
+.item input,
+.item select {
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background: #fff;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.item input {
+    width: 170px;
+}
+
+.item select {
+    width: 170px;
+}
+
+.item input:focus,
+.item select:focus {
+    outline: 1px solid #2c4a6e;
+    border-color: #2c4a6e;
+}
+
+button {
+    height: 32px;
+    padding: 0 18px;
+    background: #2c4a6e;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1f3650;
+}
+
+h2 {
+    margin: 28px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bungkus {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #e4e4e4;
+    font-weight: 600;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Modul Lapangan & Area</title>
+</head>
+<body>
+
+<h1>Modul Lapangan &amp; Area</h1>
+<hr class="garis">
+
+<form id="formLapangan" class="form-bar">
+    <div class="item">
+        <label for="nama">Nama Lapangan</label>
+        <input type="text" id="nama" required>
+    </div>
+
+    <div class="item">
+        <label for="jenis">Jenis Rumput / Lantai</label>
+        <select id="jenis" required>
+            <option value="">Pilih...</option>
+            <option value="Rumput Sintetis">Rumput Sintetis</option>
+            <option value="Rumput Alami">Rumput Alami</option>
+            <option value="Vinyl">Vinyl</option>
+            <option value="Parket">Parket</option>
+            <option value="Semen">Semen</option>
+        </select>
+    </div>
+
+    <div class="item">
+        <label for="ukuran">Ukuran (m)</label>
+        <input type="text" id="ukuran" placeholder="Contoh: 20x40" required>
+    </div>
+
+    <div class="item">
+        <label for="status">Status Fisik</label>
+        <select id="status" required>
+            <option value="">Pilih...</option>
+            <option value="Baik">Baik</option>
+            <option value="Perlu Perbaikan">Perlu Perbaikan</option>
+            <option value="Rusak">Rusak</option>
+        </select>
+    </div>
+
+    <button type="submit">Simpan</button>
+</form>
+
+<h2>Data Lapangan</h2>
+<div class="bungkus">
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Lapangan</th>
+                <th>Jenis Rumput / Lantai</th>
+                <th>Ukuran (m)</th>
+                <th>Status Fisik</th>
+            </tr>
+        </thead>
+        <tbody id="daftar">
+            <tr id="kosong">
+                <td colspan="5">Belum ada data</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var form = document.getElementById('formLapangan');
+    var daftar = document.getElementById('daftar');
+    var no = 1;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var kosong = document.getElementById('kosong');
+        if (kosong) kosong.remove();
+
+        var isi = [
+            no,
+            document.getElementById('nama').value,
+            document.getElementById('jenis').value,
+            document.getElementById('ukuran').value,
+            document.getElementById('status').value
+        ];
+
+        var tr = document.createElement('tr');
+        isi.forEach(function (nilai) {
+            var td = document.createElement('td');
+            td.textContent = nilai;
+            tr.appendChild(td);
+        });
+        daftar.appendChild(tr);
+
+        no++;
+        form.reset();
+    });
+</script>
+
+</body>
+</html>

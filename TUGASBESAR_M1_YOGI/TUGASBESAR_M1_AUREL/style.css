@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 48px 20px;
+    background: #f0f2f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    max-width: 720px;
+    margin: 0 auto 24px;
+    padding: 36px 38px 44px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+    margin: 0 0 6px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.card h2 {
+    margin: 0 0 26px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+}
+
+.row .field {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+}
+
+
+.card h2.judul-tabel {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    padding: 14px 10px;
+    background: red;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+td {
+    padding: 14px 10px;
+    border: 2px solid #ffffff;
+    background: #eef3ff;
+}

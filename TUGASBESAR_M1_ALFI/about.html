@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Instruktur & Coach</title>
+</head>
+<body>
+
+<div class="navbar">
+    <b>Sistem Venue Olahraga</b>
+    <span>Instruktur &amp; Coach</span>
+</div>
+
+<div class="isi">
+
+    <h3>Tambah Instruktur</h3>
+    <div class="kotak">
+        <form id="formInstruktur">
+            <div class="grid">
+                <div>
+                    <label for="nama">Nama Instruktur</label>
+                    <input type="text" id="nama" required>
+                </div>
+                <div>
+                    <label for="lisensi">Nomor Lisensi</label>
+                    <input type="text" id="lisensi" placeholder="contoh: LIS-2024-001" required>
+                </div>
+                <div>
+                    <label for="cabang">Keahlian Cabang</label>
+                    <select id="cabang" required>
+                        <option value="">Pilih...</option>
+                        <option value="Futsal">Futsal</option>
+                        <option value="Badminton">Badminton</option>
+                        <option value="Basket">Basket</option>
+                        <option value="Voli">Voli</option>
+                        <option value="Tenis">Tenis</option>
+                        <option value="Renang">Renang</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="telepon">Nomor Telepon</label>
+                    <input type="tel" id="telepon" placeholder="contoh: 08123456789" required>
+                </div>
+            </div>
+            <button type="submit">Tambah</button>
+        </form>
+    </div>
+
+    <h3>Data Instruktur</h3>
+    <div class="bungkus">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>No. Lisensi</th>
+                    <th>Cabang</th>
+                    <th>Telepon</th>
+                </tr>
+            </thead>
+            <tbody id="daftar">
+                <tr id="kosong">
+                    <td colspan="5">Belum ada data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    var form = document.getElementById('formInstruktur');
+    var daftar = document.getElementById('daftar');
+    var no = 1;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var kosong = document.getElementById('kosong');
+        if (kosong) kosong.remove();
+
+        var isi = [
+            no,
+            document.getElementById('nama').value,
+            document.getElementById('lisensi').value,
+            document.getElementById('cabang').value,
+            document.getElementById('telepon').value
+        ];
+
+        var tr = document.createElement('tr');
+        isi.forEach(function (nilai) {
+            var td = document.createElement('td');
+            td.textContent = nilai;
+            tr.appendChild(td);
+        });
+        daftar.appendChild(tr);
+
+        no++;
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
